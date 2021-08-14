@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="multistep-container">
+                    <div class="multistep-form-area">
+                        <div class="form-box">
+                            <ul class="active-button">
+                                <li class="active">
+                                    <span class="round-btn">1</span>
+                                </li>
+                                <li>
+                                    <span class="round-btn">2</span>
+                                </li>
+                                <li>
+                                    <span class="round-btn">3</span>
+                                </li>
+                            </ul>
+                            <h4> Personal Details</h4>
+                            <form action="">
+                                <div class="form-group">
+                                    <label for="">First Name</label>
+                                    <input type="text" name="" placeholder="First Name" id="" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label for="">Last Name</label>
+                                    <input type="text" name="" placeholder="Last Name" id="" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label for="">Date of Birth</label>
+                                    <input type="text" name="" placeholder="Date of Birth" id="" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label for="">Gender</label>
+                                    <select class="custom-select myinput" name="class" id="class">
+                                        <option value="male">Male</option>
+                                        <option value="female">Female</option>
+                                    </select>
+                                </div>
+                                <div class="button-row">
+                                    <input type="button" value="Next" class="next">
+                                </div>
+                                
+                            </form>
+                        </div>
+                        
+                        <div class="form-box">
+                            <ul class="active-button">
+                                <li class="active">
+                                    <span class="round-btn">1</span>
+                                </li >
+                                <li class="active">
+                                    <span class="round-btn">2</span>
+                                </li>
+                                <li>
+                                    <span class="round-btn">3</span>
+                                </li>
+                            </ul>
+                            <h4> Contact Details</h4>
+                            <form action="">
+                                <div class="form-group">
+                                    <label for="">Country</label>
+                                    <input type="text" name="" placeholder="Country" id="" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label for="">State</label>
+                                    <input type="text" name="" placeholder="State" id="" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label for="">City</label>
+                                    <input type="text" name="" placeholder="City" id="" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label for="">Phone</label>
+                                    <input type="text" name="" placeholder="Phone" id="" class="form-control">
+                                </div>
+                                
+                                <div class="button-row">
+                                    <input type="button" value="Previous" class="previous">
+                                    <input type="button" value="Next" class="next">
+                                </div>
+                                
+                            </form>
+                        </div>
+                        
+                        <div class="form-box">
+                            <ul class="active-button">
+                                <li class="active">
+                                    <span class="round-btn">1</span>
+                                </li >
+                                <li class="active">
+                                    <span class="round-btn">2</span>
+                                </li>
+                                <li class="active">
+                                    <span class="round-btn">3</span>
+                                </li>
+                            </ul>
+                            <h4> Login Details</h4>
+                            <form action="">
+                                <div class="form-group">
+                                    <label for="">Username</label>
+                                    <input type="text" name="" placeholder="Username" id="" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label for="">Email Address</label>
+                                    <input type="text" name="" placeholder="Email Address" id="" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label for="">Password</label>
+                                    <input type="text" name="" placeholder="Password" id="" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label for="">Facebook</label>
+                                    <input type="text" name="" placeholder="Facebook" id="" class="form-control">
+                                </div>
+                                
+                                <div class="button-row">
+                                    <input type="button" value="Previous" class="previous">
+                                    <input type="button" value="Submit" class="submit">
+                                </div>
+                                
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function(){
+        
+        $(".multistep-container .form-box .button-row .next").click(function()
+        {
+            $(this).parents(".form-box").fadeOut('fast');
+            $(this).parents(".form-box").next().fadeIn('fast');
+        });
+    
+        $(".multistep-container .form-box .button-row .previous").click(function(){
+            $(this).parents(".form-box").fadeOut('fast');
+            $(this).parents(".form-box").prev().fadeIn('fast');
+        });
+    
+    });
+</script>
+</body>
+</html>
